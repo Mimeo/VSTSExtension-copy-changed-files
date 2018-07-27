@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "copy-changed-files",
+    "name": "Copy Changed Files",
+    "version": "1.0.5",
+    "publisher": "MihirVinchhiLive",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Visual Studio Team Services build task to copy changed (new, updated, renamed) files from one folder to another.",
+    "categories": [
+        "Build and release"
+    ],    
+    "icons": {
+        "default": "copy-changed-files/icon.png"
+    },
+    "files": [
+        {            
+            "path": "copy-changed-files"
+        }
+    ],
+    "contributions": [
+        {            
+            "id": "copy-changed-files",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {                
+                "name": "copy-changed-files"
+            }
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "id": "2775a0fa-fdfa-472d-b0ef-41a107169400",
+    "name": "Copy Changed Files",
+    "friendlyName": "Copy Changed Files",
+    "description": "Visual Studio Team Services build task to copy changed (new, updated, renamed) files from one folder to another",
+    "helpMarkDown": "For more information and examples click the link below\r\n\r\n[More Information](https://www.github.com)",
+    "category": "Deploy",
+    "author": "Mimeo",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 5
+    },
+    "instanceNameFormat": "Copy files",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
+    "inputs": [        
+        {
+            "name": "WorkingDirectory",
+            "type": "filePath",
+            "label": "Working Directory",
+            "required": false,
+            "helpMarkDown": "Enter the working directory where the git command should run. This directory is also the base path for resolving glob patterns entered in the source file / dependent files parameters. Working directory is optional and when not specified, task defaults to [System.DefaultWorkingDirectory](https://docs.microsoft.com/en-us/vsts/pipelines/build/variables?view=vsts&tabs=batch#predefined-variables) build variable."
+        },
+        {
+            "name": "CopyParametersYaml",
+            "type": "multiLine",
+            "label": "Copy Parameters",
+            "required": true,
+            "helpMarkDown": "Enter file entires as copy parameters in YAML format. \r\n\r\n[More Information](https://www.github.com)"
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "copy-changed-files",
+  "version": "0.1.0",
+  "description": "VSTS build and release task to copy changed files from one folder to another",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "buildp": "tsc && tfx extension create"
+  },
+  "author": "Mimeo Inc",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^10.5.3",
+    "js-yaml": "^3.12.0",
+    "simple-git": "^1.96.0",
+    "vsts-task-lib": "^2.6.0"
+  },
+  "devDependencies": {}
+}
