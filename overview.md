@@ -22,12 +22,14 @@ This input requires in specific [YAML](http://yaml.org/) format. Input should re
 
 For example,
 
-\- sourceFile: source/file.txt
+```yaml
+- sourceFile: source/file.txt
   destinationDirectory: $(Build.ArtifactStagingDirectory)/source
   dependentFiles:
-  \- dependent-file1.txt
-  \- my-files/*.txt
-\- sourceFile: source/**/*.json
+  - dependent-file1.txt
+  - my-files/*.txt
+- sourceFile: source/**/*.json
   destinationDirectory: $(Build.ArtifactStagingDirectory)/source/json
+```
 
-In above example there are two files entires, the first one will copy 'source/file.txt' to the '$(Build.ArtifactStagingDirectory)/source' directory and also copy dependent files 'dependent-file1.txt' and files match 'my-files/*.txt' pattern. The second entry will copy all files that match 'source/**/*.json' pattern to the '$(Build.ArtifactStagingDirectory)/source/json' directory.
+In above example there are two files entires, the first one will copy 'source/file.txt' to the '$(Build.ArtifactStagingDirectory)/source' directory and also copy dependent files 'dependent-file1.txt' and files match 'my-files/*.txt' pattern. The second entry will copy all files that match 'source/\*\*/*.json' pattern to the '$(Build.ArtifactStagingDirectory)/source/json' directory.
