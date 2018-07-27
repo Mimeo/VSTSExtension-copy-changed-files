@@ -2,8 +2,8 @@
     "manifestVersion": 1,
     "id": "copy-changed-files",
     "name": "Copy Changed Files",
-    "version": "1.0.5",
-    "publisher": "MihirVinchhiLive",
+    "version": "1.0.0",
+    "publisher": "mimeo",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
